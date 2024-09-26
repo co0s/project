@@ -1,0 +1,213 @@
+/* Шрифты */
+
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../fonts/open-sans-v18-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/open-sans-v18-latin_cyrillic-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../fonts/open-sans-v18-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/open-sans-v18-latin_cyrillic-600.woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/open-sans-v18-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/open-sans-v18-latin_cyrillic-700.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    /* Центрирует элементы по горизонтали */
+    align-items: center;
+    /* Центрирует элементы по вертикали (если нужно) */
+    flex-direction: column;
+    /* Устанавливает направление элементов по вертикали */
+
+}
+
+.top__container {
+    width: 1440px;
+    justify-content: center;
+    /* Центрирует элементы по горизонтали */
+    list-style: none;
+    /* Убирает маркеры списка */
+    padding: 0;
+    /* Убирает отступы */
+    background-color: #FFF6ED;
+    padding-top: 60px;
+    padding-left: 57px;
+    padding-right: 57px;
+    padding-bottom: 42px;
+}
+
+.top__title {
+    font-family: Open Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 54.47px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+}
+
+
+.top__blocks {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.top__block {
+    max-width: 375px;
+    gap: 100px;
+}
+
+.top__icon {
+    padding-bottom: 21px;
+}
+
+.top__subtitle {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+}
+
+.top__subtitle-text1 {
+    font-family: Open Sans;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40.85px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.top__subtitle-text2 {
+    font-family: Open Sans;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40.85px;
+    color: #FF7A00;
+    margin: 0;
+    padding: 0;
+}
+
+
+.top__subtitle-descr {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.bottom__blocks {
+    max-width: 1440px;
+    display: flex;
+    padding-left: 57px;
+    padding-bottom: 57px;
+}
+
+
+.bottom__blocks__left {
+    width: 100%;
+    padding-top: 60px;
+}
+
+.bottom__blocks__left-title {
+    font-family: Open Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 54.47px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 11px;
+
+}
+
+.bottom__blocks__left-descr {
+    max-width: 600px;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom__blocks__right {
+    background-image: url(/ellipse.svg);
+    width: 100%;
+    height: 277px;
+    background-repeat: no-repeat;
+    margin-left: 2px;
+    margin-top: 24px
+}
+
+.icon3 {}
+
+.icon2 {}
+
+.bottom__container {
+    width: 1440px;
+    justify-content: center;
+    /* Центрирует элементы по горизонтали */
+    list-style: none;
+    /* Убирает маркеры списка */
+    padding: 0;
+    /* Убирает отступы */
+}
+
+.icon-fb {
+    padding-left: 112px;
+    padding-top: 69px;
+}
+
+.icon-g {
+    margin-left: -4px;
+    margin-bottom: -100px;
+}
+
+.icon-slack {
+    margin-left: -4px;
+    margin-bottom: -100px;
+}
+
+.icon-trello {
+    margin-left: -4px;
+    margin-bottom: -100px;
+}
+
+.icon-worklio {}
+
+.icon-subtract {}
+
+.icon-dropbox {}

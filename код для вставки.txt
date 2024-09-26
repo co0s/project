@@ -1,0 +1,12 @@
+// async function createTodoItem() {
+//     const response = await fetch('http://localhost:3000/api/todos', {
+//         method: 'POST',
+//         headers: {'Content-Type': 'application/json'},
+//         body: JSON.stringify({
+//             name: 'NEW TASK',
+//             owner: 'NEW OWNER'
+//         })
+//     })
+//     const data = await response.json()
+//     console.log(data);
+// }

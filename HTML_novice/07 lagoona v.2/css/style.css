@@ -1,0 +1,319 @@
+html {
+  border-style: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'font', sans-serif;
+  min-width: 1200px;
+}
+
+/* common */
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header-top {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+  outline: 1px solid coral;
+
+}
+
+.header-logo {
+  outline: 1px solid coral;
+}
+
+.header-tel {
+  margin-right: auto;
+  padding-left: 40px;
+  outline: 1px solid coral;
+}
+
+.header-login {
+  outline: 1px solid coral;
+}
+
+.header-nav-block {
+  outline: 1px solid coral;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-bottom: 70px;
+
+}
+
+.header-nav-items {
+  margin-right: auto;
+}
+
+.header-nav-item {
+  margin-left: 45px;
+
+}
+
+.header-btns {
+  margin-right: 65px;
+}
+
+.header-btn:not(:last-child) {
+  margin-right: 80px;
+}
+
+
+
+/* main */
+/*special-offers*/
+
+.special-offers-header {
+  outline: 1px solid rgb(255, 80, 80);
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+.special-offers-sect {
+  height: 540px;
+  outline: 1px solid rgb(191, 80, 255);
+  margin-bottom: 70px;
+}
+
+.special-offers-list {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.special-offers-blocks1and2 {
+  outline: 1px solid rgb(156, 145, 145);
+  width: 573px;
+  height: 258px;
+}
+
+.special-offers-block1 {
+  margin-bottom: 24px;
+}
+
+.special-offers-block3 {
+  outline: 1px solid rgb(255, 80, 80);
+  width: 573px;
+  height: 540px;
+  margin-left: 24px;
+}
+
+
+.special-offers-text {
+  padding-top: 40px;
+  padding-left: 45px;
+  padding-bottom: 15px;
+}
+
+
+.special-offers-price {
+  padding-left: 45px;
+  padding-bottom: 47px;
+}
+
+.special-offers-details {
+  padding-left: 45px;
+}
+
+/* about_us */
+
+.about-us {
+  outline: 1px solid coral;
+  width: 888px;
+  margin-bottom: 70px;
+  ;
+}
+
+.about-us-title {
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+/* services */
+
+.services {
+  outline: 1px solid coral;
+}
+
+.services-title {
+  padding-left: 40px;
+}
+
+.services-lists {
+  outline: 1px solid rgb(80, 141, 255);
+  padding-left: 0;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+
+
+}
+
+.services-list {
+  outline: 1px solid coral;
+  list-style-type: none;
+  width: 573px;
+  min-height: 330px;
+}
+
+.services-list:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+.services-list1and2 {
+  margin-bottom: 24px;
+}
+
+.services-img {
+  background-image: url(/img/services-img1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.services-subtitle {
+  padding-top: 26px;
+  padding-left: 45px;
+}
+
+.services-text {
+  padding-left: 45px;
+}
+
+/* advantages */
+
+.advantages-title {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.advantages-list {
+  outline: 1px solid coral;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.advantages-blocks {
+  outline: 1px solid rgb(170, 80, 255);
+  list-style: none;
+  width: 270px;
+  min-height: 276px;
+}
+
+.advantages-blocks:not(:nth-child(4n)) {
+margin-right: 22px;
+}
+
+
+.advantages-blocks:not(:nth-child(n+5)) {
+  margin-bottom: 22px;
+}
+
+.advantages-img {
+  padding-top: 40px;
+  padding-left: 45px;
+  margin-bottom: 10px;
+}
+
+.advantages-text {
+  padding-left: 45px;
+  padding-right: 42px;
+}
+
+/*
+ acommodation */
+
+.acommodation-title {
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+.acommodation-list {
+  outline: 1px solid coral;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.acommodation-blocks {
+  outline: 1px solid rgb(170, 80, 255);
+  list-style: none;
+  width: 374px;
+  min-height: 440px;
+}
+
+.acommodation-blocks:not(:nth-child(n+7)) {
+  margin-bottom: 24px;
+}
+
+.acommodation-text-1 {
+  outline: 1px solid rgb(170, 80, 255);
+  padding-left: 45px;
+}
+
+.acommodation-text-2 {
+  outline: 1px solid rgb(170, 80, 255);
+  padding-left: 4px;
+}
+
+.acommodation-text-3 {
+  outline: 1px solid rgb(170, 80, 255);
+  padding-left: 4px;
+  padding-right: 45px;
+}
+
+.acommodation-text-common {
+  padding-top: 45px;
+  padding-bottom: 16px;
+}
+
+.acommodation-text-4 {
+  padding-left: 45px;
+  padding-bottom: 16px;
+}
+
+
+.acommodation-text-5 {
+  padding-left: 45px;
+  padding-bottom: 20px;
+}
+
+.acommodation-btn {
+  margin-left: 45px;
+}

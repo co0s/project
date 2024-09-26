@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    async function loadTodoItems() {
+        const response = await fetch('http://localhost:3000/api/todos')
+        const data = await response.json()
+        console.log(data);
+    }
+    
+    async function createTodoItem() {
+        const response = await fetch('http://localhost:3000/api/todos', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                name: 'NEW TASK',
+                owner: 'NEW OWNER'
+            })
+        })
+        const data = await response.json()
+        console.log(data);
+    }
+
+async function getTodoItem () {
+    const response = await fetch('http://localhost:3000/api/todos/1725713708561')
+    const data = await response.json()
+    console.log(data);
+}
+
+async function markTodoAsDone() {
+    const response = await fetch('http://localhost:3000/api/todos/1725713708561' , {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({done:false})
+    })
+    const data = await response.json()
+    console.log(data);
+}
+
+async function deleteTodoItem() {
+    const response = await fetch('http://localhost:3000/api/todos/1725713708561',{
+        method: 'DELETE',
+    })
+    if (response.status === 404) console.log('cannot delete as doesnt exist');
+    const data = await response.json()
+    console.log(data);
+}
+
+deleteTodoItem()
+   
+    
+</script>
+<body>
+    <h1>123</h1>
+</body>
+</html>

@@ -1,0 +1,524 @@
+html {
+  border-style: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Muller', sans-serif;
+  font-weight: 400;
+  min-width: 1200px;
+  background-color: #E5E5E5;
+}
+
+/* common */
+
+.arrow {
+  margin-left: 15px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerLight"),
+    url("../fonts/MullerLight.woff2") format(".woff2"),
+    url("../fonts/MullerLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("Mullerregular"),
+    url("../fonts/MullerRegular.woff2") format(".woff2"),
+    url("../fonts/MullerRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerMedium"),
+    url("../fonts/MullerMedium.woff2") format(".woff2"),
+    url("../fonts/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerBold"),
+    url("../fonts/MullerBold.woff2") format(".woff2"),
+    url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* header */
+
+.header-top {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.header-tel {
+  margin-right: auto;
+  padding-left: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #666666
+}
+
+.header-login {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #CC9933
+}
+
+.header-nav-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-bottom: 70px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.header-nav-items {
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #666666;
+}
+
+.header-nav-item {
+  margin-left: 45px;
+}
+
+.header-btns {
+  margin-right: 65px;
+}
+
+.header-btn {
+  color: #CC9933;
+  border: 1px solid #CC9933;
+  padding: 13px 20px;
+  border-radius: 10px;
+}
+
+.header-btn:not(:last-child) {
+  margin-right: 80px;
+}
+
+
+
+/* main */
+/*special-offers*/
+
+.special-offers-header {
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333
+}
+
+.special-offers-blocks {
+  margin-bottom: 70px;
+}
+
+.special-offers-block-left {
+  flex-basis: 50%;
+  margin-right: 24px;
+  border-radius: 15px;
+}
+
+.special-offers-block-right{
+  flex-basis: 50%;
+}
+
+
+.special-offers-block1 {
+  padding: 40px;
+  border-radius: 15px;
+margin-bottom: 24px;
+background-size: cover;
+  background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(/img/special-offers-block1.jpg);
+}
+
+.special-offers-block2 {
+  padding: 40px;
+  border-radius: 15px;
+  background-size: cover;
+  background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(/img/special-offers-block2.jpg);
+}
+
+.special-offers-block3 {
+  padding: 212px 0px 0px 45px;
+  background-size: cover;
+  background-image: url(/img/special-offers-block3.jpg);
+  border-radius: 15px;
+}
+
+.special-offers-text1 {
+  width: 420px;
+}
+
+.special-offers-text1and2 {
+
+
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+
+.special-offers-text3 {
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: #FFFFFF;
+  max-width: 180px;
+}
+
+
+.special-offers-price {
+  padding-bottom: 47px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.special-offers-price3 {
+  padding-bottom: 47px;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.8;
+  font-size: 30px;
+  line-height: 30px;
+  color: #FFFFFF
+}
+
+.special-offers-details {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #F0BF5F;
+}
+
+
+
+
+/* about_us */
+
+.about-us {
+  width: 888px;
+  margin-bottom: 70px;
+
+}
+
+.about-us-title {
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333
+}
+
+.about-us-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #000000;
+}
+
+/* services */
+
+.services-block {
+  padding-top: 26px;
+  padding-left: 45px;
+  padding-bottom: 35px;
+  padding-right: 126px;
+
+
+}
+
+.services-title {
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.services-lists {
+  padding-left: 0;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.services-list {
+  list-style-type: none;
+  width: 573px;
+  min-height: 330px;
+  background-color: #FFFFFF;
+  border-radius: 15px 15px;
+}
+
+.services-list:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+.services-list1and2 {
+  margin-bottom: 24px;
+}
+
+.services-img {
+  height: 165px;
+  background-image: url(/img/services-img1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.services-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+
+  align-items: center;
+  color: #CC9933;
+}
+
+
+.services-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #000000;
+}
+
+.services-subtitle-text1 {
+  max-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* advantages */
+
+.advantages-title {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.advantages-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.advantages-blocks {
+  list-style: none;
+  width: 270px;
+  min-height: 276px;
+  background: #FFFFFF;
+  border-radius: 15px;
+}
+
+.advantages-blocks:not(:nth-child(4n)) {
+  margin-right: 22px;
+}
+
+
+.advantages-blocks:not(:nth-child(n+5)) {
+  margin-bottom: 22px;
+}
+
+.advantages-block {
+  padding: 40px 42px 32px 45px;
+}
+
+.advantages-img {
+  margin-bottom: 10px;
+}
+
+.advantages-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #000000;
+}
+
+/*
+ acommodation */
+
+.acommodation-title {
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.acommodation-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.acommodation-blocks {
+  list-style: none;
+  width: 374px;
+  min-height: 440px;
+  background: #FFFFFF;
+  border-radius: 15px;
+}
+
+.acommodation-blocks:not(:nth-child(n+7)) {
+  margin-bottom: 24px;
+}
+
+.acommodation-block {
+  padding: 32px 45px 45px 45px;
+
+}
+
+.acommodation-text-1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.acommodation-text-2 {
+  padding-left: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.acommodation-text-3 {
+  padding-left: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.acommodation-text-common {
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.acommodation-text-4 {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+
+.acommodation-text-5 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.acommodation-btn {
+  background-color: #FFFFFF;
+  color: #CC9933;
+  border: 1px solid #CC9933;
+  border-radius: 10px;
+  padding: 13px 20px;
+}
+
+.acommodation-img {
+  height: 217px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.acommodation-img-last {
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+}
+
+.acommodation-text-last {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: #FFFFFF;
+  align-items: center
+}
+
+.acommodation-block-last {
+  padding-left: 54px;
+  padding-top: 373px;
+}
+
+.acommodation-stars {
+  justify-content: space-between;
+  gap: 6px;
+}
