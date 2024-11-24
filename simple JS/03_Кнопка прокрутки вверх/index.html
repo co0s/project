@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокрутка вверх</title>
+    <style>
+        body {
+            height: 2000vh; /* Делаем высоту страницы в 20 раз больше окна */
+            background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<button id="scrollToTop">Наверх</button>
+
+<script>
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop > 100) {            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+</html>

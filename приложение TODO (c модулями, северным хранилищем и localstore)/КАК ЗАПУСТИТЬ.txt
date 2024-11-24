@@ -1,0 +1,2 @@
+1. открываем папку todo-server => терминал =>  node index
+2. открываем папку todo-app => serve => копируем адрес local (http://localhost:3000) (может быть не 3000)

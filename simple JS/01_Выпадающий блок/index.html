@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выпадающий блок</title>
+    <style>
+        #dropdown {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 200px;
+            background-color: white;
+            position: absolute;
+        }
+
+        #button {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="button">Показать блок</button>
+    <div id="dropdown">Содержимое блока</div>
+
+    <script>
+        const button = document.getElementById('button');
+        const dropdown = document.getElementById('dropdown');
+
+        button.addEventListener('click', () => {
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!dropdown.contains(event.target) && event.target !== button) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

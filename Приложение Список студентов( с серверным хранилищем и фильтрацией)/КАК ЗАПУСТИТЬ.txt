@@ -1,0 +1,2 @@
+1. открываем файл backend => терминал => node index
+2. запускаем StudentList через liveserver

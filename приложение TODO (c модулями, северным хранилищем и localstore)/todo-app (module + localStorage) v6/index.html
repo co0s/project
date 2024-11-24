@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script type="module">
+
+        //     import { createTodoApp } from './view.js';
+        //     const serverText = 'Перейти на серверное хранилище';
+        //     const localText = 'Перейни на локальное хранилище';
+        //     const container = document.getElementById('todo-app')
+        //     const btnSwitch = document.getElementById('switch-btn')
+
+
+
+        //             (async () => {
+        //                 let serverStorage = 'api'
+        //                 const storageApi = await import(`./${serverStorage}`)
+        //                 const owner = "Я";
+        //                 const todoItemList = await storageApi.getTodoList(owner)
+        //                 createTodoApp(document.getElementById('todo-app'), {
+        //                     title: 'Мои-дела',
+        //                     owner,
+        //                     todoItemList,
+        //                     onCreateFormSubmit: storageApi.createTodoItem,
+        //                     onDoneClick: storageApi.switchTodoItemDone,
+        //                     onDeleteClick: storageApi.deleteTodoItem,
+        //                 })
+        //             })()
+
+
+
+        //             btnSwitch.addEventListener('click', async () => {
+        //                 if (btnSwitch.textContent == serverText) {
+        //                     let localStorage = 'ls'
+        //                     const storageLs = await import(`./${localStorage}`)
+        //                     btnSwitch.textContent = localText
+        //                     container.innerHTML = ''
+        //                     const owner = "Я";
+        //                     const todoItemList = await storageLs.getTodoList(owner)
+
+        //                     createTodoApp(document.getElementById('todo-app'), {
+        //                         title: 'Мои-дела',
+        //                         owner,
+        //                         todoItemList,
+        //                         onCreateFormSubmit: storageLs.createTodoItem,
+        //                         onDoneClick: storageLs.switchTodoItemDone,
+        //                         onDeleteClick: storageLs.deleteTodoItem,
+        //                     })
+        //                 } else {
+        //                     let serverStorage = 'api'
+        //                     const storageApi = await import(`./${serverStorage}`)
+        //                     btnSwitch.textContent = serverText
+        //                     container.innerHTML = ''
+        //                     const owner = "Я";
+        //                     const todoItemList = await storageApi.getTodoList(owner)
+        //                     createTodoApp(document.getElementById('todo-app'), {
+        //                         title: 'Мои-дела',
+        //                         owner,
+        //                         todoItemList,
+        //                         onCreateFormSubmit: storageApi.createTodoItem,
+        //                         onDoneClick: storageApi.switchTodoItemDone,
+        //                         onDeleteClick: storageApi.deleteTodoItem,
+        //                     })
+        //                 }
+        //             })
+
+
+        import { createTodoApp } from './view.js';
+        const serverText = 'Перейти на серверное хранилище';
+        const localText = 'Перейти на локальное хранилище';
+        const container = document.getElementById('todo-app');
+        const btnSwitch = document.getElementById('switch-btn');
+
+        // Функция для загрузки данных из API
+        async function loadFromApi() {
+            const serverStorage = 'api.js';
+            const storageApi = await import(`./${serverStorage}`);
+            const owner = "Я";
+            const todoItemList = await storageApi.getTodoList(owner);
+
+            createTodoApp(container, {
+                title: 'Мои-дела',
+                owner,
+                todoItemList,
+                onCreateFormSubmit: storageApi.createTodoItem,
+                onDoneClick: storageApi.switchTodoItemDone,
+                onDeleteClick: storageApi.deleteTodoItem,
+            });
+        }
+
+        // Функция для загрузки данных из локального хранилища
+        async function loadFromLocalStorage() {
+            const localStorageModule = 'ls.js';
+            const storageLs = await import(`./${localStorageModule}`);
+            const owner = "Я";
+            const todoItemList = await storageLs.getTodoList(owner);
+
+            createTodoApp(container, {
+                title: 'Мои-дела',
+                owner,
+                todoItemList,
+                onCreateFormSubmit: storageLs.createTodoItem,
+                onDoneClick: storageLs.switchTodoItemDone,
+                onDeleteClick: storageLs.deleteTodoItem,
+            });
+        }
+
+        // Инициализация приложения с localStorage
+        (async () => {
+            await loadFromLocalStorage();
+        })();
+
+
+        // // Обработчик события переключения
+        // btnSwitch.addEventListener('click', async () => {
+        //     let storeType = 'ls'
+
+        //     if (storeType === 'ls') {
+        //         btnSwitch.textContent = localText;
+        //         container.innerHTML = '';
+        //         await loadFromLocalStorage();
+
+        //     } else if (storeType == 'api') {
+        //         btnSwitch.textContent = serverText;
+        //         container.innerHTML = '';
+        //         await loadFromApi();
+
+        //     }
+        // })
+
+
+        // Обработчик события переключения
+        btnSwitch.addEventListener('click', async () => {
+            if (btnSwitch.textContent === localText) {
+                btnSwitch.textContent = serverText;
+                container.innerHTML = '';
+                await loadFromLocalStorage();
+            } else {
+                btnSwitch.textContent = localText;
+                container.innerHTML = '';
+                await loadFromApi();
+            }
+        });
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container mb-5">
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Мои-дела</a>
+            <a href="dad.html" class="nav-link">Дела П</a>
+            <a href="mom.html" class="nav-link">Дела М</a>
+        </nav>
+        <button id="switch-btn" class="btn btn-primary">Использовать Local Storage</button>
+    </div>
+    <div id="todo-app" class="container"></div>
+</body>
+
+</html>
