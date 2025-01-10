@@ -1,0 +1,21 @@
+{
+  "name": "payment-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  },
+  "dependencies": {
+    "card-validator": "^10.0.2",
+    "inputmask": "^5.0.9",
+    "validator": "^13.12.0"
+  }
+}

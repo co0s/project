@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма оплаты</title>
+    <link rel="stylesheet" href="/index.1303bb05.css">
+    <style>
+</style>
+</head>
+<body>
+    <div id="app">
+        <form id="payment-form">
+            <label for="card-number">Номер карты:</label> 
+            <div class="card-number-container">
+               
+                <img id="card-image" src="/visa.82a831ed.png" alt="Card Logo">
+                <input type="text" id="card-number" inputmode="numeric" maxlength="19">
+          
+            </div>
+            <span id="card-error" class="error text-error"></span><br><br>
+
+            <label for="expiry-date">Дата окончания (ММ/ГГ):</label>
+            <input type="text" id="expiry-date" inputmode="numeric" maxlength="5">
+            <span id="expiry-error" class="error"></span><br><br>
+
+            <label for="cvc">CVC/CVV:</label>
+            <input type="text" id="cvc" inputmode="numeric" maxlength="3">
+            <span id="cvc-error" class="error"></span><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+            <span id="email-error" class="error"></span><br><br>
+
+            <button type="submit" id="pay-button" disabled="">Оплатить</button>
+        </form>
+    </div>
+    <script src="/index.8cfc62b9.js" defer=""></script>
+</body>
+</html>
